@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/entryItemMain"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical" >
+
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" >
+
+        <it.rvs.xkcdroid.widget.AutoResizeImageView
+            android:id="@+id/ivEntry"
+            android:layout_width="match_parent"
+            android:padding="5dp"
+            android:background="@drawable/image_frame"
+            android:layout_height="wrap_content" />
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginBottom="@dimen/margin_medium"
+            android:layout_marginEnd="@dimen/margin_small"
+            android:layout_marginLeft="@dimen/margin_small"
+            android:layout_marginRight="@dimen/margin_small"
+            android:layout_marginStart="@dimen/margin_small"
+            android:layout_marginTop="@dimen/margin_medium"
+            android:layout_weight="1" >
+
+            <it.rvs.xkcdroid.widget.OutlineTextView
+                android:id="@+id/tvTitle"
+                style="@style/txtEntryList.Title.Style"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_alignParentTop="true"
+                android:layout_marginEnd="@dimen/margin_small"
+                android:layout_marginRight="@dimen/margin_small"
+                android:background="@drawable/title_background" />
+
+            <it.rvs.xkcdroid.widget.OutlineTextView
+                android:id="@+id/tvSubtitle"
+                style="@style/txtEntryList.Subtitle.Style"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_alignParentBottom="true"
+                android:text=""
+                android:visibility="visible" />
+        </RelativeLayout>
+    </FrameLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="bottom"
+        android:layout_marginBottom="@dimen/margin_medium"
+        android:orientation="horizontal" >
+
+
+            <TextView
+                android:id="@+id/tvAlt"
+                style="@style/txtEntryList.Alt.Style"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/margin_small"
+                android:layout_marginStart="@dimen/margin_small"
+                android:visibility="visible" />
+
+    </LinearLayout>
+
+</LinearLayout>
