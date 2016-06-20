@@ -17,9 +17,9 @@ namespace XKCDroid
 
         public event EventHandler LoadTriggered;
 
-        public override int ScrollHorizontallyBy(int dx, RecyclerView.Recycler recycler, RecyclerView.State state)
+        public override int ScrollVerticallyBy(int dx, RecyclerView.Recycler recycler, RecyclerView.State state)
         {
-            var scrollRange = base.ScrollHorizontallyBy(dx, recycler, state);
+            var scrollRange = base.ScrollVerticallyBy(dx, recycler, state);
             var overScroll = dx - scrollRange;
             if (overScroll > 0)
                 LoadTriggered?.Invoke(this, EventArgs.Empty);
